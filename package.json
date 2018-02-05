@@ -1,0 +1,40 @@
+{
+  "name": "homebank-automatic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "test": "./node_modules/karma/bin/karma start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/expect": "^1.20.2",
+    "@types/papaparse": "^4.1.33",
+    "lodash": "^4.17.4",
+    "papaparse": "^4.3.6",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "rxjs": "^5.5.6"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.8.6",
+    "@types/lodash": "^4.14.93",
+    "@types/react": "^16.0.36",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
+    "@types/redux": "^3.6.0",
+    "jasmine": "^2.9.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-typescript": "^3.0.12",
+    "karma-webpack": "^2.0.9",
+    "ts-loader": "^3.3.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  }
+}
