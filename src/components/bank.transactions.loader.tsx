@@ -17,10 +17,9 @@ export default class BankTransactionsLoader extends React.PureComponent<BankTran
     return (
       <div>
         <input type="file" ref={this.setFileInputRef} onChange={(e) => {
-          console.log(e.currentTarget.value)
           this.forceUpdate()
         }} />
-        <button type="button" disabled={!this.isLoadButtonEnabled()} id="loadButton" onClick={this.onLoad}>Load</button>
+        <button type="button" disabled={!this.isLoadButtonEnabled()} onClick={this.onLoad}>Load</button>
       </div>
     )
   }

@@ -4,10 +4,14 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { reducer } from './state/reducer';
 import BankTransactionsLoader from './components/bank.transactions.loader'
+import { LoadingWizard } from './components/loading.wizard';
 
 ReactDOM.render(
   <Provider store={createStore(reducer)}>
-    <BankTransactionsLoader onLoad={x => console.log(x)} /> 
+    <>
+    <LoadingWizard />
+    <BankTransactionsLoader onLoad={x => console.log(x)} />
+    </>
   </Provider>,
   document.getElementById('root')
 )
