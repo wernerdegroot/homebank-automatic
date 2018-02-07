@@ -3,10 +3,6 @@ import { probabilityBinGivenPropertyValue } from './probabilities';
 import { getYear } from '../bank.transaction';
 import { properties, propertyYear, propertyWordsInDescription } from '../bank.transaction.property';
 
-it('henk', () => {
-  expect(true).toBe(false)
-})
-
 describe('probabilities', () => {
   it('should do it', () => {
     { // Test year

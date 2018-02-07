@@ -78,6 +78,10 @@ export class Valid<E, A> {
 
   constructor(readonly value: A) { }
 
+  isValid(): this is Valid<E, A> {
+    return true
+  }
+
   map<B>(fn: (a: A) => B): Validated<E, B> {
     return new Valid<E, B>(fn(this.value))
   }
@@ -99,6 +103,10 @@ export class Invalid<E, A> {
   readonly errorType: E = null as any as E
 
   constructor(readonly errors: E[]) { }
+
+  isValid(): this is Valid<E, A> {
+    return false
+  }
 
   map<B>(fn: (a: A) => B): Validated<E, B> {
     return new Invalid<E, B>(this.errors)

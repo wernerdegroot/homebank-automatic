@@ -27,7 +27,7 @@ export function isArray<A>(fn: (v: any) => Validated<string, A>) {
 }
 
 type IsObjectArg<O extends object> = { [K in keyof O]: (v: any) => Validated<string, O[K]> }
-export function combine<O extends object>(o: IsObjectArg<O>) {
+export function isObject<O extends object>(o: IsObjectArg<O>) {
   return (v: any): Validated<string, O> => {
     if (typeof v === 'object') {
       const applied: { [K in keyof O]?: Validated<string, O[K]> } = {}
