@@ -1,0 +1,28 @@
+@mixin button($button-color, $text-color) {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  color: $text-color;
+  background-color: $button-color;
+  border-radius: 4px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: $button-color;
+
+  &:hover {
+    border-color: darken($button-color, 5%);
+    background-color: darken($button-color, 5%);
+  }
+
+  &:active {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.button {
+  @include button(#6c757d, white)
+}
+
+.button.primary {
+  @include button(purple, white)
+}
