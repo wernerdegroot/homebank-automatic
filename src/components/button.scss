@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 @mixin button($button-color, $text-color) {
   cursor: pointer;
   display: inline-block;
@@ -8,13 +10,21 @@
   border-width: 3px;
   border-style: solid;
   border-color: $button-color;
+  outline: 0;
+  font-family: $font-family;
+  font-size: 1em;
 
-  &:hover {
+  &.disabled {
+    border-color: rgba($button-color, 0);
+    background-color: rgba($button-color, 0.4);
+  }
+
+  &:not(.disabled):hover {
     border-color: darken($button-color, 5%);
     background-color: darken($button-color, 5%);
   }
 
-  &:active {
+  &:not(.disabled):active {
     border-color: rgba(255, 255, 255, 0.5);
   }
 }
